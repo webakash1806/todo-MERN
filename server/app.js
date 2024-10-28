@@ -1,5 +1,5 @@
 import express from 'express'
-import cors from 'cors'
+// import cors from 'cors'
 import { config } from 'dotenv'
 import cookieParser from 'cookie-parser'
 import morgan from 'morgan'
@@ -10,10 +10,10 @@ config()
 
 const app = express()
 
-app.use(cors({
-    origin: [process.env.FRONTEND_URL, "http://localhost:5173","https://akash.webakash1806.com"],
-    credentials: true
-}))
+// app.use(cors({
+//     origin: [process.env.FRONTEND_URL, "http://localhost:5173","https://akash.webakash1806.com"],
+//     credentials: true
+// }))
 
 app.use(express.urlencoded({ extended: true }))
 
