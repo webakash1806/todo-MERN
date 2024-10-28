@@ -3,10 +3,11 @@ import AppError from "../utils/error.util.js"
 import bcrypt from 'bcryptjs'
 
 const cookieOption = {
-    secure: process.env.NODE_ENV === 'production' ? true : false,
     maxAge: 7 * 24 * 60 * 60 * 1000,
     httpOnly: true,
-};
+    secure: true,
+    sameSite: 'None',
+}
 
 const register = async (req, res, next) => {
 
